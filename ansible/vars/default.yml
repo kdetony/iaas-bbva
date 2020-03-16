@@ -1,0 +1,4 @@
+---
+create_containers: 2
+default_container_name: cnt_web
+default_container_image: nginx

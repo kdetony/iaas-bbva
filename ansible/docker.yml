@@ -1,0 +1,13 @@
+---
+- name: Instalando docker
+  hosts: server
+  tasks:
+     - name: Download Script Docker
+       become: yes
+       get_url: 
+          url: https://get.docker.com
+          dest: /tmp/get-docker.sh
+          mode: 0755
+
+     - name: Ejecutando el script
+       script: /tmp/get-docker.sh
