@@ -1,6 +1,6 @@
-resource "digitalocean_droplet" "web" {
-  image  = "ubuntu-18-04-x64"
-  name   = "web-1"
+resource "digitalocean_droplet" "do" {
+  image  = "centos-7-x64"
+  name   = "do-centos"
   region = "nyc1"
   size   = "s-1vcpu-1gb"
 }
