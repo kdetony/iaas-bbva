@@ -115,6 +115,13 @@ mkdir -p /opt/ansible
 ### OBS.
 * En el archivo *hosts* debemos ingresar la ip publica del droplet que creamos via terraform.
 * Debemos copiar la llave ssh de nuestro servidor ORIGEN, para copiarlo en el servidor creado por terraform **OJO!**
+* En el servidor donde tenemos instalado **ansible**: 
+
+> ssh-keygen -t rsa
+
+> ssh-copy-id -i ~/.ssh/id_rsa.pub root@IP_SERVIDOR_NUEVO
+
+
 * Validar el acceso SSH. (no debe pedir contraseña)
 
 Vamos ahora a instalar docker, para ello ejecutamos el playbook:
@@ -124,7 +131,7 @@ ansible-playbook docker.yml
 
 Ahora vamos a crear contenedores desde ansible, antes de ello ejecutamos previamente:
 ```
-pip install docker-py
+pip3 install docker-py
 ```
 
 Y ejecutamos: 
