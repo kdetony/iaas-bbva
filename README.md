@@ -97,14 +97,14 @@ Parte 2
 En esta parte, vamos a instalar Ansible, para ello seguiremos los sgts pasos: 
 
 ```
-yum install python-pip
+yum install python3-pip
 ```
 
 Ahora, instalamos ansible via pip:
 ```
-pip install ansible 
+pip3 install ansible 
 
-pip install --upgrade pip
+pip3 install --upgrade pip
 ```
 
 Ahora, vamos a trabajar en la carpeta ansible:
