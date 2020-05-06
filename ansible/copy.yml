@@ -1,0 +1,17 @@
+---
+- name: correr script
+  hosts: server
+  become: yes
+  tasks:
+    - name: Copiando script
+      copy:
+        src: /opt/ansible/get-docker.sh
+        dest: /tmp/get-docker.sh
+
+    - name: Ejecuta script
+      command: bash /tmp/get-docker.sh
+      register: console
+
+    - debug: msg="{{ console.stdout }}"
+
+    - debug: msg="{{ console.stderr }}" 
